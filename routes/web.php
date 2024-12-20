@@ -5,6 +5,7 @@ use App\Models\User;
 use App\Livewire\Home;
 use App\Livewire\Category;
 use App\Livewire\SubCategory;
+use App\Livewire\Product;
 Route::get('/', function () {
     $d=User::get();
     
@@ -28,3 +29,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/homePage', Home::class)->name('homePage');
 Route::get('/Category', Category::class)->name('Category');
 Route::get('/subCategory', SubCategory::class)->name('subCategory');
+Route::get('/product', Product::class)->name('product');

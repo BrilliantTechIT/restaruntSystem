@@ -47,7 +47,7 @@
                         <a class="nav-link" href="/subCategory" wire:navigate>الاصناف الفرعية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="reservation.php">reservation</a>
+                        <a class="nav-link" href="/product" wire:navigate>المنتجات</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">logout</a>
