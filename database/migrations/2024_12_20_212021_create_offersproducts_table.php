@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('offersproducts', function (Blueprint $table) {
             $table->id();
+           
+
+            $table->unsignedBigInteger('id_product');
+            $table->unsignedBigInteger('number');
+            $table->unsignedBigInteger('id_offers');
+            // $table->unsignedBigInteger('id_main_cat');
+            // $table->unsignedBigInteger('id_sub_cat');
             $table->timestamps();
         });
     }

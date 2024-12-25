@@ -26,6 +26,23 @@ class Product extends Component
         'maincat' => 'required|exists:main_categories,id',
         'subcat' => 'required|exists:sub_categories,id',
     ];
+
+    protected $messages = [
+        'name.required' => 'حقل الاسم مطلوب.',
+        'name.string' => 'يجب أن يكون الاسم نصيًا.',
+        'name.max' => 'يجب ألا يزيد الاسم عن 255 حرفًا.',
+    
+        'price.required' => 'حقل السعر مطلوب.',
+        'price.integer' => 'يجب أن يكون السعر رقمًا صحيحًا.',
+        'price.min' => 'يجب ألا يكون السعر أقل من صفر.',
+    
+        'maincat.required' => 'حقل التصنيف الرئيسي مطلوب.',
+        'maincat.exists' => 'التصنيف الرئيسي المحدد غير موجود.',
+    
+        'subcat.required' => 'حقل التصنيف الفرعي مطلوب.',
+        'subcat.exists' => 'التصنيف الفرعي المحدد غير موجود.',
+    ];
+    
     public function render()
     {
        

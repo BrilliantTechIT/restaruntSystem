@@ -11,14 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('offers', function (Blueprint $table) {
+        Schema::create('discounts_tables', function (Blueprint $table) {
             $table->id();
-            $table->String('uid');
-            $table->String('name');
-            $table->Boolean('stute')->default(true);
-            $table->integer('price');
-            $table->date('startdate');
-            $table->date('enddate');
+            $table->integer('n')->default(0);
             $table->timestamps();
         });
     }
@@ -28,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('offers');
+        Schema::dropIfExists('discounts_tables');
     }
 };

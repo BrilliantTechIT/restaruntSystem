@@ -6,14 +6,14 @@
     <link href="//db.onlinewebfonts.com/c/465b1cbe35b5ca0de556720c955abece?family=AbolitionW00-Regular" rel="stylesheet"
         type="text/css" />
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="{{asset('css/linearicons.css')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link rel="stylesheet" href="css/fixed.css">
-    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="{{asset('css/fixed.css')}}">
+    <link rel="stylesheet" href="{{asset('css/button.css')}}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Foodilite</title>
@@ -29,8 +29,7 @@
     <nav class="navbar navbar-expand-md navbar-dark position-sticky-top fixed-top">
         <div class="canvas-area">
             <div class="head1">
-                <a class="navbar-logo" href="#"><img src="img/logo.png"
-                        style="height:35px; width: 214px;padding-top:1px"> </a></div>
+                <a class="navbar-logo" href="#">Brilliant Tech </a></div>
             <div class="flot">
                 <button class="navbar-toggler" type="button " style="float: right" data-toggle="collapse"
                     data-target="#navbarResponsive">
@@ -50,7 +49,15 @@
                         <a class="nav-link" href="/product" wire:navigate>المنتجات</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php">logout</a>
+                        <a class="nav-link" href="/Offers" wire:navigate>العروض</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sales" wire:navigate>المبيعات</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Discounts" wire:navigate>نسبة التخفيظ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="user.php">
@@ -70,75 +77,7 @@
 
 
     <!----------End Cuisines---------->
-    <footer class="footer-area foo-4">
-        <div class="footer-widget-wrap">
-            <div class="container">
-                <div class="row section-gap">
-                    <div class="col-lg-4  col-md-6 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h4>Opening Hours</h4>
-                            <ul class="hr-list">
-                                <li class="d-flex justify-content-between">
-                                    <span>Monday - Thursday</span> <span>12:00 pm - 11:00 pm</span>
-                                </li>
-                                <li class="d-flex justify-content-between">
-                                    <span>Saturday</span> <span>12:00 pm - 12:00 am</span>
-                                </li>
-                                <li class="d-flex justify-content-between">
-                                    <span>Sunday</span> <span>6:00 pm - 12:00 pm</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4  col-md-6 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h4>Contact Us</h4>
-                            <p>
-                                2nd Cross, MG road, Kodialbail, DK, Karnataka India - 575003
-                            </p>
-                            <p class="number">
-                                012-6532-568-9746 <br>
-                                012-6532-569-9748
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4  col-md-6 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h4>Newsletter</h4>
-                            <p>You can trust us. we only send promo offers, not a single spam.</p>
-                            <div class="d-flex flex-row" id="mc_embed_signup">
-                                <form class="navbar-form"
-                                    action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                    method="get" novalidate="true">
-                                    <div class="input-group add-on align-items-center d-flex">
-                                        <input class="form-control" name="EMAIL" placeholder="Your Email address"
-                                            onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''"
-                                            onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Your Email address'"
-                                            required="" type="email">
-                                        <div style="position: absolute; left: -5000px;">
-                                            <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
-                                                type="text">
-                                        </div>
-                                        <div class="input-group-btn">
-                                            <button class="genric-btn">
-                                                <span class="lnr lnr-arrow-right"></span></button>
-                                        </div>
-                                    </div>
-                                    <div class="info mt-20"></div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bot">
-            <p>
-                Created with <i class="fa fa-heart"></i> by
-                <a target="_blank" href="index.html">Foodilite</a>
-            </p>
-        </div>
-    </footer>
+  
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -151,7 +90,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/scrollbar.js"></script>
+    <script src="{{asset('js/scrollbar.js')}}"></script>
 
 
     <script>

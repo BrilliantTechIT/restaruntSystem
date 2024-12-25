@@ -16,6 +16,14 @@ class Category extends Component
         'name' => 'required|string|max:255',
         'stute' => 'boolean',
     ];
+
+    protected $messages = [
+        'name.required' => 'حقل الاسم مطلوب.',
+        'name.string' => 'يجب أن يكون الاسم نصيًا.',
+        'name.max' => 'يجب ألا يزيد الاسم عن 255 حرفًا.',
+    
+        'stute.boolean' => 'يجب أن تكون الحالة صحيحة أو خاطئة فقط.',
+    ];
     public function render()
     {
         $this->records = MainCategory::where('name', 'like', '%' . $this->search . '%')->get();

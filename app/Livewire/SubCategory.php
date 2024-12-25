@@ -19,6 +19,19 @@ class SubCategory extends Component
         'id_main' => 'required|integer|exists:main_categories,id',
         'stute' => 'boolean',
     ];
+
+    protected $messages = [
+        'name.required' => 'حقل الاسم مطلوب.',
+        'name.string' => 'يجب أن يكون الاسم نصيًا.',
+        'name.max' => 'يجب ألا يزيد الاسم عن 255 حرفًا.',
+    
+        'id_main.required' => 'التصنيف الرئيسي مطلوب.',
+        'id_main.integer' => 'يجب أن يكون التصنيف الرئيسي رقمًا صحيحًا.',
+        'id_main.exists' => 'التصنيف الرئيسي المحدد غير موجود.',
+    
+        'stute.boolean' => 'الحالة يجب أن تكون صحيحة أو خاطئة.',
+    ];
+    
     public function render()
     {
 
