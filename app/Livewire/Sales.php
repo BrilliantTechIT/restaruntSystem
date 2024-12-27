@@ -8,6 +8,8 @@ use App\Models\Salestable;
 use App\Models\Salesproduct;
 use App\Models\DiscountsTable;
 use Str;
+use Livewire\WithoutUrlPagination;
+use Livewire\WithPagination;
 class Sales extends Component
 {
     public $allp=[];
@@ -19,7 +21,7 @@ class Sales extends Component
     public $note;
     public $customer='عام';
     public $search='';
-    
+    use WithPagination, WithoutUrlPagination; 
     protected $rules = [
         'customer' => 'required|string|max:255',
         'total' => 'required|numeric|min:0',
@@ -38,6 +40,7 @@ class Sales extends Component
     ];
     public function render()
     {
+        $oldse=Salestable::orderby('id','desc')->paginate(30);
         $this->total=0;
         $d=ProductTable::Where('name','like','%'.$this->search.'%')->Where('stute',1)->get();
         foreach ($this->allp as $key => $value) {
@@ -52,7 +55,7 @@ class Sales extends Component
         // dd($this->total);
 
         $this->paid=$this->total;
-        return view('livewire.sales',['pro'=>$d]);
+        return view('livewire.sales',['pro'=>$d,'oldse'=>$oldse]);
     }
     
 

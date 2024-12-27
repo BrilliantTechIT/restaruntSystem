@@ -141,12 +141,42 @@
                 </form>
             </div>
 
+            <div class="col-12">
+                <table class="table table-striped">
+                   <thead>
+                    <th>
+                        رقم الفاتورة
+                    </th>
+                    <th>
+                        تاريخ الفاتورة
+                    </th>
+                    <th>
+                        
+                    </th>
+                   </thead>
+                    @foreach ($oldse as $item)
+                        <tr>
+                            <td>
+                                {{$item->id}}
+                            </td>
+                            <td>
+                                {{$item->created_at}}
+                            </td>
+                            <td>
+                                <a target="_blank" href="{{route('print',['id'=>$item->uid])}}" class="btn btn-info">طباعة</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                  </table>
+                  {{$oldse->links('vendor.livewire.bootstrap')}}
+                </div>
+
 
         </div>
         <script>
           document.addEventListener('livewire:init', function () {
         Livewire.on('print', event => {
-        // console.log(event);
+         console.log(event);
         window.open('/print/'+event[0], '_blank');
 
            

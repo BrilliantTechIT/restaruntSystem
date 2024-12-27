@@ -16,10 +16,12 @@ class Discounts extends Component
     public function change()
     {
         $d=DiscountsTable::first();
+        $d=DiscountsTable::find($d->id);
         if($d)
         {
+            // dd($d);
             $d->n=$this->dis;
-            $d-save();
+            $d->save();
         }
         else
         {

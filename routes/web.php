@@ -29,7 +29,7 @@ Route::get('/', function () {
 
 
 Auth::routes();
-
+Route::middleware('auth')->group(function() {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/homePage', Home::class)->name('homePage');
 Route::get('/Category', Category::class)->name('Category');
@@ -40,3 +40,4 @@ Route::get('/Offersproduct/{id}', OffersProduct::class)->name('Offersproduct');
 Route::get('/sales', Sales::class)->name('sales');
 Route::get('/Discounts', Discounts::class)->name('Discounts');
 Route::get('/print/{id}', [App\Http\Controllers\HomeController::class, 'print'])->name('print');
+});
